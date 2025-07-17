@@ -1,0 +1,12 @@
+[
+  { "id": "andrey", "name": "Андрей", "pfp": "/avatars/andrey.jpg" },
+  { "id": "shram", "name": "Шрам", "pfp": "/avatars/shram.jpg" },
+  { "id": "sasha", "name": "Саша", "pfp": "/avatars/sasha.png" },
+  { "id": "dima", "name": "Дима", "pfp": "/avatars/dima.png" },
+  { "id": "yarik", "name": "Ярик", "pfp": "/avatars/yarik.png" },
+  { "id": "maksim", "name": "Максим", "pfp": "/avatars/maksim.png" },
+  { "id": "artem", "name": "Артем", "pfp": "/avatars/artem.png" },
+  { "id": "vitalik", "name": "Виталик", "pfp": "/avatars/vitalik.png" },
+  { "id": "vanya_maloy", "name": "Ваня малой", "pfp": "/avatars/vanya_maloy.png" },
+  { "id": "vanya_shalamay", "name": "Ваня Шаламай", "pfp": "/avatars/vanya_shalamay.png" }
+] 

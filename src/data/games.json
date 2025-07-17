@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": 1,
+      "date": "2025-06-15",
+      "notes": "Игра у Виталика дома.",
+      "playersBuyins": [
+        { "playerId": "shram", "buyins": [10, 10], "result": -20},
+        { "playerId": "vitalik", "buyins": [10], "result": -10},
+        { "playerId": "andrey", "buyins": [10, 20], "result": -30},
+        { "playerId": "dima", "buyins": [10], "result": 30},
+        { "playerId": "sasha", "buyins": [10], "result": 50},
+        { "playerId": "vanya_shalamay", "buyins": [10, 10], "result": -20}
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2025-07-6",
+      "notes": "Вторая игра",
+      "playersBuyins": [
+        { "playerId": "maksim", "buyins": [10, 10, 10, 10, 10, 10], "result": -60},
+        { "playerId": "dima", "buyins": [10, 10, 10], "result": 0},
+        { "playerId": "artem", "buyins": [10, 10], "result": -20},
+        { "playerId": "andrey", "buyins": [10], "result": 83},
+        { "playerId": "yarik", "buyins": [10], "result": -10},
+        { "playerId": "sasha", "buyins": [10], "result": 0},
+        { "playerId": "vanya_shalamay", "buyins": [10], "result": 10}
+      ]
+    },
+    {
+      "id": 3,
+      "date": "2025-07-15",
+      "notes": "Третья игра, пьяная тройка",
+      "playersBuyins": [
+        { "playerId": "dima", "buyins": [10, 10, 10], "result": -30 },
+        { "playerId": "vanya_maloy", "buyins": [10, 10, 10, 10], "result": -40 },
+        { "playerId": "andrey", "buyins": [10, 10, 10, 10, 10, 10, 10, 20], "result": -90 },
+        { "playerId": "yarik", "buyins": [10, 10, 10], "result": -30 },
+        { "playerId": "sasha", "buyins": [10, 10], "result": -20 },
+        { "playerId": "maksim", "buyins": [10, 10, 10], "result": 186 },
+        { "playerId": "shram", "buyins": [10, 10], "result": -20 },
+        { "playerId": "vanya_shalamay", "buyins": [10], "result": 43.8 }
+      ]
+    }
+  ]
+} 
