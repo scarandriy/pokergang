@@ -25,6 +25,15 @@ interface PatchNote {
 
 const patchNotes: PatchNote[] = [
   {
+    version: "1.1.3",
+    date: "2025-01-27",
+    title: "Обновление аватаров игроков",
+    description: "Добавлены новые аватары для игроков, у которых их не было, и обновлены существующие аватары для лучшего визуального представления.",
+    type: "improvement",
+    priority: "medium",
+    affectedAreas: ["Профили игроков", "Карточки игроков", "Визуальный дизайн"]
+  },
+  {
     version: "1.1.2",
     date: "2025-01-27",
     title: "Исправления точности расчетов и отображения валюты",
@@ -117,6 +126,7 @@ export function PatchNotesDialog() {
 
   const fixes = patchNotes.filter(note => note.type === 'fix');
   const features = patchNotes.filter(note => note.type === 'feature');
+  const improvements = patchNotes.filter(note => note.type === 'improvement');
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen} >
@@ -203,13 +213,73 @@ export function PatchNotesDialog() {
             </div>
           )}
 
+          {/* Improvements Section */}
+          {improvements.length > 0 && (
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-green-600 dark:text-green-400">
+                  ✨ Улучшения
+                </h3>
+                <Badge className="bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                  {improvements.length}
+                </Badge>
+              </div>
+              
+              <div className="grid gap-4">
+                {improvements.map((note, index) => (
+                  <Card key={index} className="border-l-4 border-l-green-500 bg-green-50/30 dark:bg-green-900/10">
+                    <CardHeader className="pb-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                        <div className="space-y-2">
+                          <div className="flex items-start gap-2 flex-wrap">
+                            <CardTitle className="text-base sm:text-lg">{note.title}</CardTitle>
+                            <div className="flex gap-1 flex-wrap">
+                              <Badge 
+                                variant="outline" 
+                                className={`text-xs ${getTypeColor(note.type)}`}
+                              >
+                                {getTypeLabel(note.type)}
+                              </Badge>
+                              <Badge className={`text-xs ${getPriorityColor(note.priority)}`}>
+                                {getPriorityLabel(note.priority)}
+                              </Badge>
+                            </div>
+                          </div>
+                          <p className="text-sm text-muted-foreground">{note.description}</p>
+                        </div>
+                        <div className="text-xs text-muted-foreground whitespace-nowrap">
+                          v{note.version}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    
+                    {note.affectedAreas && note.affectedAreas.length > 0 && (
+                      <CardContent className="pt-0">
+                        <div className="space-y-2">
+                          <p className="text-xs font-medium text-muted-foreground">Затронутые области:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {note.affectedAreas.map((area, areaIndex) => (
+                              <Badge key={areaIndex} variant="secondary" className="text-xs">
+                                {area}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    )}
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* New Features Section */}
           {features.length > 0 && (
             <div className="space-y-4">
               <Separator />
               <div className="flex items-center gap-2">
                 <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                  ✨ Новые функции
+                  🚀 Новые функции
                 </h3>
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
                   {features.length}
