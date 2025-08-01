@@ -152,6 +152,9 @@ export function getPlayerStats(playerId: string): PlayerStats {
   recentSessions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   buyinHistory.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+  // Округляем результат до 1 знака после запятой для избежания ошибок точности
+  totalResult = Math.round(totalResult * 10) / 10;
+
   return {
     totalSessions,
     totalBuyins,
@@ -285,7 +288,6 @@ export interface Top3Result {
 }
 
 export function getTop3TotalResults(): Top3Result[] {
-  const players = getAllPlayers();
   const sessions = getAllSessions();
   const playerResults = new Map<string, number>();
   

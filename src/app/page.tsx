@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/table';
 import { BarChartComponent, AreaChartComponent } from '@/components/ui/charts';
 import { PlayerAvatar } from '@/components/PlayerAvatar';
+import { PatchNotesDialog } from '@/components/PatchNotesDialog';
 
 export default function HomePage() {
   const sessions = getAllSessions();
@@ -30,6 +31,8 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto py-4 sm:py-8 px-4">
+      <PatchNotesDialog />
+      
       <div className="flex justify-between items-center mb-4 sm:mb-6">
         <h1 className="text-xl sm:text-2xl font-bold">ППГ</h1>
         <Button asChild size="sm" className="sm:size-default">

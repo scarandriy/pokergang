@@ -1,4 +1,5 @@
 export interface Player {
+  description?: string;
   id: string;
   name: string;
   pfp?: string; // путь к аватарке игрока

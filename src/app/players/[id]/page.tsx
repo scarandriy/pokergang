@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getPlayerById, getPlayerStats, formatDate, formatCurrency, formatResult } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent,CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { PlayerAvatar } from '@/components/PlayerAvatar';
 import {
@@ -118,7 +117,7 @@ export default async function PlayerPage({ params }: PlayerPageProps) {
                         {formatResult(session.result)}
                       </span>
                     ) : (
-                      <span className="text-muted-foreground">0₽</span>
+                      <span className="text-muted-foreground">0€</span>
                     )}
                   </Link>
                 </TableCell>

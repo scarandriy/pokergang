@@ -21,7 +21,7 @@
         { "playerId": "maksim", "buyins": [10, 10, 10, 10, 10, 10], "result": -60},
         { "playerId": "dima", "buyins": [10, 10, 10], "result": 0},
         { "playerId": "artem", "buyins": [10, 10], "result": -20},
-        { "playerId": "andrey", "buyins": [10], "result": 83},
+        { "playerId": "andrey", "buyins": [10], "result": 80},
         { "playerId": "yarik", "buyins": [10], "result": -10},
         { "playerId": "sasha", "buyins": [10], "result": 0},
         { "playerId": "vanya_shalamay", "buyins": [10], "result": 10}
@@ -32,14 +32,14 @@
       "date": "2025-07-15",
       "notes": "Третья игра, пьяная тройка",
       "playersBuyins": [
-        { "playerId": "dima", "buyins": [10, 10, 10], "result": -30 },
-        { "playerId": "vanya_maloy", "buyins": [10, 10, 10, 10], "result": -40 },
+        { "playerId": "dima", "buyins": [10, 10], "result": -20 },
+        { "playerId": "vanya_maloy", "buyins": [10, 10, 10, 10, 10], "result": -50 },
         { "playerId": "andrey", "buyins": [10, 10, 10, 10, 10, 10, 10, 20], "result": -90 },
         { "playerId": "yarik", "buyins": [10, 10, 10], "result": -30 },
         { "playerId": "sasha", "buyins": [10, 10], "result": -20 },
         { "playerId": "maksim", "buyins": [10, 10, 10], "result": 186 },
         { "playerId": "shram", "buyins": [10, 10], "result": -20 },
-        { "playerId": "vanya_shalamay", "buyins": [10], "result": 43.8 }
+        { "playerId": "vanya_shalamay", "buyins": [10], "result": 44 }
       ]
     },
     {
@@ -47,13 +47,13 @@
       "date": "2025-07-17",
       "notes": "Игра номер 4, безалкогольный ром",
       "playersBuyins": [
-        { "playerId": "dima", "buyins": [10, 10, 10], "result": 50 },
+        { "playerId": "dima", "buyins": [10, 10], "result": 20 },
         { "playerId": "vanya_maloy", "buyins": [10, 20, 10, 10, 10, 20, 10, 10, 10], "result": -110 },
-        { "playerId": "andrey", "buyins": [10, 10], "result": 86.9 },
-        { "playerId": "yarik", "buyins": [10, 10], "result": 20 },
-        { "playerId": "sasha", "buyins": [10, 10, 10, 10], "result": 73.5 },
+        { "playerId": "andrey", "buyins": [10, 10], "result": 65.2 },
+        { "playerId": "yarik", "buyins": [10, 10], "result": 0 },
+        { "playerId": "sasha", "buyins": [10, 10, 10, 10], "result": 33.5 },
         { "playerId": "maksim", "buyins": [10, 10, 10, 10, 10, 10, 10], "result": -70 },
-        { "playerId": "vanya_shalamay", "buyins": [10], "result": 71.3 }
+        { "playerId": "vanya_shalamay", "buyins": [10], "result": 61.3 }
       ]
     }
   ]

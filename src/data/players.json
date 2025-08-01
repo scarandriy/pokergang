@@ -1,12 +1,52 @@
 [
-  { "id": "andrey", "name": "Андрей", "pfp": "/avatars/andrey.jpg" },
-  { "id": "shram", "name": "Шрам", "pfp": "/avatars/shram.jpg" },
-  { "id": "sasha", "name": "Саша", "pfp": "/avatars/sasha.png" },
-  { "id": "dima", "name": "Дима", "pfp": "/avatars/dima.png" },
-  { "id": "yarik", "name": "Ярик", "pfp": "/avatars/yarik.png" },
-  { "id": "maksim", "name": "Максим", "pfp": "/avatars/maksim.png" },
-  { "id": "artem", "name": "Артем", "pfp": "/avatars/artem.png" },
-  { "id": "vitalik", "name": "Виталик", "pfp": "/avatars/vitalik.png" },
-  { "id": "vanya_maloy", "name": "Ваня малой", "pfp": "/avatars/vanya_maloy.png" },
-  { "id": "vanya_shalamay", "name": "Ваня Шаламай", "pfp": "/avatars/vanya_shalamay.png" }
+  { "id": "andrey", 
+    "name": "Андрей", 
+    "description": "Это мой смол", 
+    "pfp": "/avatars/andrey.png" 
+  },
+  { "id": "shram", 
+    "name": "Шрам", 
+    "description": "Нормис",
+    "pfp": "/avatars/shram.png" 
+  },
+  { "id": "sasha", 
+    "name": "Саша",
+    "description": "Лудик с опытом", 
+    "pfp": "/avatars/sasha.png" 
+  },
+  { "id": "dima", 
+    "name": "Дима", 
+    "description": "Маньякич",
+    "pfp": "/avatars/dima.png" 
+  },
+  { "id": "yarik", 
+    "name": "Ярик", 
+    "description": "Новичок",
+    "pfp": "/avatars/yarik.png" 
+  },
+  { "id": "maksim", 
+    "name": "Максим", 
+    "description": "Самый азартный",
+    "pfp": "/avatars/maksim.png" 
+  },
+  { "id": "artem", 
+    "name": "Артем", 
+    "description": "Игрок",
+    "pfp": "/avatars/artem.png" 
+  },
+  { "id": "vitalik", 
+    "name": "Виталик", 
+    "description": "Гений",
+    "pfp": "/avatars/vitalik.png" 
+  },
+  { "id": "vanya_maloy", 
+    "name": "Ваня малой", 
+    "description": "Спонсор",
+    "pfp": "/avatars/vanya_maloy.png" 
+  },
+  { "id": "vanya_shalamay", 
+    "name": "Ваня Шаламай", 
+    "description": "Игрок",
+    "pfp": "/avatars/vanya_shalamay.png" 
+  }
 ] 
