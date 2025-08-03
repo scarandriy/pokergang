@@ -55,6 +55,19 @@
         { "playerId": "maksim", "buyins": [10, 10, 10, 10, 10, 10, 10], "result": -70 },
         { "playerId": "vanya_shalamay", "buyins": [10], "result": 61.3 }
       ]
+    },
+    {
+      "id": 5,
+      "date": "2025-08-2",
+      "notes": "Игра 5, чиловый раскмар у димы дома",
+      "playersBuyins": [
+        { "playerId": "dima", "buyins": [10], "result": 11.5 },
+        { "playerId": "andrey", "buyins": [10, 20], "result": -30 },
+        { "playerId": "andrey_kolikov", "buyins": [10, 10], "result": -20 },
+        { "playerId": "sasha", "buyins": [10, 10, 10], "result": 83.5 },
+        { "playerId": "shram", "buyins": [10], "result": 15 },
+        { "playerId": "vanya_shalamay", "buyins": [10, 10, 10, 10, 20], "result": -60 }
+      ]
     }
   ]
 } 

@@ -23,7 +23,16 @@ interface PatchNote {
   affectedAreas?: string[];
 }
 
-const patchNotes: PatchNote[] = [
+const patchNotesData: PatchNote[] = [
+  {
+    version: "1.1.5",
+    date: "2025-01-27",
+    title: "Добавлены данные игры №5",
+    description: "Добавлена статистика для новой игровой сессии, проведенной у Димы дома. Включены результаты всех участников и детальная информация о бай-инах.",
+    type: "feature",
+    priority: "medium",
+    affectedAreas: ["Статистика игр", "Глобальные метрики", "История сессий"]
+  },
   {
     version: "1.1.3",
     date: "2025-01-27",
@@ -52,6 +61,8 @@ const patchNotes: PatchNote[] = [
     affectedAreas: ["Карточки игроков", "Отображение результатов", "Пользовательский интерфейс"]
   }
 ];
+
+const patchNotes = patchNotesData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const getTypeColor = (type: PatchNote['type']) => {
   switch (type) {

@@ -48,5 +48,10 @@
     "name": "Ваня Шаламай", 
     "description": "Игрок",
     "pfp": "/avatars/vanya_shalamay.png" 
+  },
+  { "id": "andrey_kolikov", 
+    "name": "Андрей Коликов", 
+    "description": "А давай кол",
+    "pfp": "" 
   }
 ] 
