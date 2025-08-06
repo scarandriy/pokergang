@@ -68,6 +68,20 @@
         { "playerId": "shram", "buyins": [10], "result": 15 },
         { "playerId": "vanya_shalamay", "buyins": [10, 10, 10, 10, 20], "result": -60 }
       ]
+    },
+    {
+      "id": 5,
+      "date": "2025-08-6",
+      "notes": "Игра 6, разочарование",
+      "playersBuyins": [
+        { "playerId": "dima", "buyins": [10, 10, 10], "result": 52.3 },
+        { "playerId": "andrey", "buyins": [10, 10, 20], "result": 0},
+        { "playerId": "vitalik", "buyins": [10, 10], "result": -20 },
+        { "playerId": "sasha", "buyins": [10], "result": -10 },
+        { "playerId": "shram", "buyins": [10, 20], "result": -7.3 },
+        { "playerId": "vanya_maloy", "buyins": [10], "result": -10 },
+        { "playerId": "yarik", "buyins": [10, 10], "result": -5 }
+      ]
     }
   ]
 } 
