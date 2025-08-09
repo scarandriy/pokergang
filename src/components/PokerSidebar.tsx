@@ -7,6 +7,7 @@ import {
   IconHome,
   IconUsers,
   IconCards,
+  IconHistory,
 } from "@tabler/icons-react"
 
 import {
@@ -33,6 +34,11 @@ const navigationData = {
       title: "Игроки",
       url: "/players",
       icon: IconUsers,
+    },
+    {
+      title: "История игр",
+      url: "/games",
+      icon: IconHistory,
     },
   ],
 }

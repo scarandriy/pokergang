@@ -2,14 +2,6 @@ import Link from 'next/link';
 import { getAllSessions, formatDate, formatCurrency, calculateTotalBuyIn, getPlayerCount, getGlobalStats, getTop3TotalResults } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import { BarChartComponent, AreaChartComponent } from '@/components/ui/charts';
 import { PlayerAvatar } from '@/components/PlayerAvatar';
 import { PatchNotesDialog } from '@/components/PatchNotesDialog';
@@ -179,9 +171,8 @@ export default function HomePage() {
         </Card>
       </div>
 
- 
       {/* Базовые метрики */}
-      <Card className="mb-6 sm:mb-8">
+      <Card >
         <CardContent className="p-6">
           <div className="grid grid-cols-3 gap-4">
             <div className="text-center">
@@ -200,51 +191,7 @@ export default function HomePage() {
         </CardContent>
       </Card>
       
-      {/* Таблица игр */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base sm:text-lg">🎯 Последние игры</CardTitle>
-          <CardDescription className="text-xs sm:text-sm">Список всех игровых сессий</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="text-xs sm:text-sm">Дата</TableHead>
-                <TableHead className="text-xs sm:text-sm hidden md:table-cell">Игроков</TableHead>
-                <TableHead className="text-xs sm:text-sm">Общий депозит</TableHead>
-                <TableHead className="text-xs sm:text-sm">Действия</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sessions.map((session) => (
-                <TableRow key={session.id} className="cursor-pointer hover:bg-muted/50">
-                  <TableCell className="text-xs sm:text-sm">
-                    <Link href={`/game/${session.id}`} className="block">
-                      {formatDate(session.date)}
-                    </Link>
-                  </TableCell>
-                  <TableCell className="text-xs sm:text-sm hidden md:table-cell">
-                    <Link href={`/game/${session.id}`} className="block">
-                      {getPlayerCount(session)}
-                    </Link>
-                  </TableCell>
-                  <TableCell className="text-xs sm:text-sm">
-                    <Link href={`/game/${session.id}`} className="block">
-                      {session.playersBuyins ? formatCurrency(calculateTotalBuyIn(session)) : '-'}
-                    </Link>
-                  </TableCell>
-                  <TableCell>
-                    <Button asChild size="sm" className="text-xs">
-                      <Link href={`/game/${session.id}`}>Подробнее</Link>
-                    </Button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+      
     </div>
   );
 }
