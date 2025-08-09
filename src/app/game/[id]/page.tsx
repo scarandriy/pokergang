@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getSessionById, formatDate, formatCurrency, formatResult, getPlayerName } from '@/lib/data';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
   Table,
@@ -33,16 +31,9 @@ export default async function GamePage({ params }: GamePageProps) {
   const playerCount = session.playersBuyins?.length || session.players?.length || 0;
 
   return (
-    <div className="container mx-auto py-4 sm:py-8 px-4">
+    <div className="py-4 px-4">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 gap-2 sm:gap-0">
-        <div className="flex items-center gap-2 sm:gap-4">
-          <Button variant="outline" asChild size="sm" className="sm:size-default">
-            <Link href="/">← Назад к играм</Link>
-          </Button>
-          <Button variant="outline" asChild size="sm" className="sm:size-default">
-            <Link href="/players">Игроки</Link>
-          </Button>
-        </div>
+        
         <h1 className="text-lg sm:text-2xl font-bold">Игра {formatDate(session.date)}</h1>
       </div>
 

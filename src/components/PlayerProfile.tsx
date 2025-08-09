@@ -15,7 +15,7 @@ interface PlayerProfileProps {
 export function PlayerProfile({ player, totalBuyins, totalResults, totalSessions, description }: PlayerProfileProps) {
   return (
     <Link href={`/players/${player.id}`} className="block">
-      <Card className="w-full max-w-md hover:shadow-lg transition-shadow cursor-pointer">
+      <Card className="w-full hover:shadow-lg transition-shadow cursor-pointer">
         <CardHeader className="flex flex-row items-center gap-4">
           <PlayerAvatar playerId={player.id} size="lg" />
           <div className="flex-1">

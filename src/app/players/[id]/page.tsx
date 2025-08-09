@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getPlayerById, getPlayerStats, formatDate, formatCurrency, formatResult } from '@/lib/data';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { PlayerAvatar } from '@/components/PlayerAvatar';
 import {
@@ -30,15 +29,7 @@ export default async function PlayerPage({ params }: PlayerPageProps) {
   const stats = getPlayerStats(id);
 
   return (
-    <div className="container mx-auto py-4 sm:py-8 px-4">
-      <div className="flex items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
-        <Button variant="outline" asChild size="sm" className="sm:size-default">
-          <Link href="/players">← Назад к игрокам</Link>
-        </Button>
-        <Button variant="outline" asChild size="sm" className="sm:size-default">
-          <Link href="/">Игры</Link>
-        </Button>
-      </div>
+    <div className="py-4 px-4">
 
       {/* Заголовок с аватаром */}
       <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">

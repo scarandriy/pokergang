@@ -30,19 +30,19 @@ export default function HomePage() {
   const top3ResultsData = getTop3TotalResults();
 
   return (
-    <div className="container mx-auto py-4 sm:py-8 px-4">
+    <div className="  py-4 px-4">
       <PatchNotesDialog />
       
-      <div className="flex justify-between items-center mb-4 sm:mb-6">
+      {/* <div className="flex justify-between items-center mb-4 sm:mb-6">
         <h1 className="text-xl sm:text-2xl font-bold">ППГ</h1>
         <Button asChild size="sm" className="sm:size-default">
           <Link href="/players">Игроки</Link>
         </Button>
-      </div>
+      </div> */}
 
       {/* Шутливые метрики */}
       <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">Общий деп</CardTitle>
           </CardHeader>
@@ -53,7 +53,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">🏆 Чемпион по додепам</CardTitle>
           </CardHeader>
@@ -67,7 +67,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">💎 Самый щедрый</CardTitle>
           </CardHeader>
@@ -81,7 +81,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">👑 Король побед</CardTitle>
           </CardHeader>
@@ -95,7 +95,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">😭 Топ проебер</CardTitle>
           </CardHeader>
@@ -109,7 +109,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">💸 Самый экономный</CardTitle>
           </CardHeader>
@@ -123,7 +123,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 flex-1 min-w-[200px] sm:min-w-[250px]">
+        <Card className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">🦸 Последний герой</CardTitle>
           </CardHeader>

@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import { getAllPlayers, getAllSessions } from '@/lib/data';
-import { Button } from '@/components/ui/button';
 import { PlayerProfile } from '@/components/PlayerProfile';
 
 export default function PlayersPage() {
@@ -30,7 +28,9 @@ export default function PlayersPage() {
         }
       }
     });
-      totalResults = Math.round(totalResults * 10) / 10;
+
+    // Округляем результат до 1 знака после запятой для избежания ошибок точности
+    totalResults = Math.round(totalResults * 10) / 10;
 
     return {
       player,
@@ -42,11 +42,8 @@ export default function PlayersPage() {
   });
 
   return (
-    <div className="container mx-auto py-4 sm:py-8 px-4">
+    <div className="p-4 sm:p-8">
       <div className="flex items-center justify-between mb-4 sm:mb-6">
-        <Button variant="outline" asChild size="sm" className="sm:size-default">
-          <Link href="/">← Назад к играм</Link>
-        </Button>
         <h1 className="text-xl sm:text-2xl font-bold">Игроки</h1>
       </div>
 

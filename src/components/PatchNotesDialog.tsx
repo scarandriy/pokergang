@@ -21,48 +21,65 @@ interface PatchNote {
   type: 'fix' | 'feature' | 'improvement';
   priority: 'high' | 'medium' | 'low';
   affectedAreas?: string[];
+  show: boolean; // Controls if this patch note should be shown to users
 }
 
 const patchNotesData: PatchNote[] = [
   {
-    version: "1.1.5",
-    date: "2025-08-3",
+    version: "1.2.0",
+    date: "2025-8-9",
+    title: "Добавлено боковое меню навигации",
+    description: "Добавлено профессиональное боковое меню с навигацией по всем разделам приложения. Включает возможность скрытия/показа меню, адаптивный дизайн для мобильных устройств и автоматическое закрытие на мобильных устройствах при переходе между страницами.",
+    type: "feature",
+    priority: "high",
+    affectedAreas: ["Навигация", "Пользовательский интерфейс", "Мобильная версия", "Удобство использования"],
+    show: true
+  },
+  {
+    version: "1.1.4",
+    date: "2025-01-27",
     title: "Добавлены данные игры №5",
     description: "Добавлена статистика для новой игровой сессии, проведенной у Димы дома. Включены результаты всех участников и детальная информация о бай-инах.",
     type: "feature",
     priority: "medium",
-    affectedAreas: ["Статистика игр", "Глобальные метрики", "История сессий"]
+    affectedAreas: ["Статистика игр", "Глобальные метрики", "История сессий"],
+    show: false
   },
   {
     version: "1.1.3",
-    date: "2025-08-1",
+    date: "2025-01-27",
     title: "Обновление аватаров игроков",
     description: "Добавлены новые аватары для игроков, у которых их не было, и обновлены существующие аватары для лучшего визуального представления.",
     type: "improvement",
     priority: "medium",
-    affectedAreas: ["Профили игроков", "Карточки игроков", "Визуальный дизайн"]
+    affectedAreas: ["Профили игроков", "Карточки игроков", "Визуальный дизайн"],
+    show: false
   },
   {
     version: "1.1.2",
-    date: "2025-08-1",
+    date: "2025-01-27",
     title: "Исправления точности расчетов и отображения валюты",
     description: "Критические исправления для обеспечения корректной работы системы расчетов и отображения валюты во всех разделах приложения.",
     type: "fix",
     priority: "high",
-    affectedAreas: ["Расчеты результатов", "Отображение валюты", "Страница игроков", "Индивидуальные профили"]
+    affectedAreas: ["Расчеты результатов", "Отображение валюты", "Страница игроков", "Индивидуальные профили"],
+    show: false
   },
   {
     version: "1.1.1",
-    date: "2025-08-1",
+    date: "2025-01-27",
     title: "Новые функции отображения статистики",
     description: "Добавлены новые элементы интерфейса для улучшения пользовательского опыта и предоставления более детальной информации о результатах игроков.",
     type: "feature",
     priority: "medium",
-    affectedAreas: ["Карточки игроков", "Отображение результатов", "Пользовательский интерфейс"]
+    affectedAreas: ["Карточки игроков", "Отображение результатов", "Пользовательский интерфейс"],
+    show: false
   }
 ];
 
-const patchNotes = patchNotesData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const patchNotes = patchNotesData
+  .filter(note => note.show) // Only show patch notes where show is true
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const getTypeColor = (type: PatchNote['type']) => {
   switch (type) {
