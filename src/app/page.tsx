@@ -42,7 +42,7 @@ export default function HomePage() {
 
       {/* Шутливые метрики */}
       <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">Общий деп</CardTitle>
           </CardHeader>
