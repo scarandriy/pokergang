@@ -13,10 +13,18 @@ export default function HomePage() {
   // Данные для графика накопления депозита
   const depositChartData = sessions
     .filter(s => s.playersBuyins)
-    .map(session => ({
-      date: formatDate(session.date),
-      amount: calculateTotalBuyIn(session)
-    }));
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .map((session, index, sortedSessions) => {
+      // Вычисляем накопительную сумму всех бай-инов до текущей даты
+      const cumulativeAmount = sortedSessions
+        .slice(0, index + 1)
+        .reduce((total, s) => total + calculateTotalBuyIn(s), 0);
+      
+      return {
+        date: formatDate(session.date),
+        amount: cumulativeAmount
+      };
+    });
 
   // Данные для графика топ-3 лучших результатов
   const top3ResultsData = getTop3TotalResults();
@@ -45,7 +53,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">🏆 Чемпион по додепам</CardTitle>
           </CardHeader>
@@ -59,7 +67,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">💎 Самый щедрый</CardTitle>
           </CardHeader>
@@ -73,7 +81,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">👑 Король побед</CardTitle>
           </CardHeader>
@@ -87,7 +95,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">😭 Топ проебер</CardTitle>
           </CardHeader>
@@ -101,7 +109,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">💸 Самый экономный</CardTitle>
           </CardHeader>
@@ -115,7 +123,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 flex-1 min-w-[200px] sm:min-w-[400px]">
+        <Card className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 flex-1 min-w-[200px] sm:min-w-[300px]">
           <CardHeader className="pb-0">
             <CardTitle className="text-sm sm:text-base font-medium">🦸 Последний герой</CardTitle>
           </CardHeader>
